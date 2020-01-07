@@ -72,6 +72,20 @@ export const SendMessage = (props) => {
                 return setMessage(e.target.value);
         }
     }
+
+    const onSubmit = () => {
+        props.submitMessage(name, email, contact, company, message);
+        setName('');
+        setEmail('');
+        setContact('');
+        setCompany('');
+        setMessage('');
+        document.getElementById('fullName').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('contactInfo').value = '';
+        document.getElementById('company').value = '';
+        document.getElementById('message').value = '';
+    }
    
     /**
     * Markup
@@ -80,16 +94,16 @@ export const SendMessage = (props) => {
     return(
         <div className="sendMessage">
             <div className="sendMessage-wrapper">
-                <input placeholder="Full Name" onChange={() => handleOnInputChange(event, "name")}/>
-                <input placeholder="Email" onChange={() => handleOnInputChange(event, "email")}/>
-                <input placeholder="Contact" onChange={() => handleOnInputChange(event, "contact")}/>
-                <input placeholder="Company" onChange={() => handleOnInputChange(event, "company")}/>
+                <input placeholder="Full Name" id="fullName" onChange={() => handleOnInputChange(event, "name")}/>
+                <input placeholder="Email" id="email" onChange={() => handleOnInputChange(event, "email")}/>
+                <input placeholder="Contact" id="contactInfo" onChange={() => handleOnInputChange(event, "contact")}/>
+                <input placeholder="Company" id="company" onChange={() => handleOnInputChange(event, "company")}/>
             </div>
-            <textarea placeholder="Your Message" rows="2" onChange={() => handleOnInputChange(event, "message")}></textarea>
+            <textarea placeholder="Your Message" id="message" rows="2" onChange={() => handleOnInputChange(event, "message")}></textarea>
             <Button 
                 className={"sendMessage-submit"}
                 outerDivClassName={"sendMessage-outerDiv-submit"}
-                onClick={() => props.submitMessage(name, email, contact, company, message)}
+                onClick={onSubmit}
                 text={"Submit"}
                 disabled={name === '' || email === '' || contact === '' || company === '' || message === ''}
             />
