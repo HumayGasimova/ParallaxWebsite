@@ -56,7 +56,7 @@ export default createStore(
             epicMiddleware,
             routerMiddleware(history),
            
-            // logger,
+            logger,
             
             thunk
             )

@@ -80,13 +80,16 @@ export const SendMessage = (props) => {
         setContact('');
         setCompany('');
         setMessage('');
-        document.getElementById('fullName').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('contactInfo').value = '';
-        document.getElementById('company').value = '';
-        document.getElementById('message').value = '';
+        clearInputValue('fullName');
+        clearInputValue('email');
+        clearInputValue('contactInfo');
+        clearInputValue('company');
+        clearInputValue('message');
     }
    
+    const clearInputValue = (fieldId) => {
+        document.getElementById(fieldId).value = '';
+    }
     /**
     * Markup
     */
