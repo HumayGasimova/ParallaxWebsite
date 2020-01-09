@@ -18,7 +18,7 @@ import {
 * Styles
 */
 
-import './peoplesFeedback.scss';
+import './peopleFeedback.scss';
 
 /**
 * Actions
@@ -33,10 +33,10 @@ import * as Actions from '../../../actions';
 import * as Selectors from '../../../reducers/selectors';
 
 /**
-* PeoplesFeedback component definition and export
+* PeopleFeedback component definition and export
 */
 
-export const PeoplesFeedback = (props) => {
+export const PeopleFeedback = (props) => {
 
     /**
     * Methods
@@ -95,5 +95,5 @@ export default connect(
             stopChangingFeedbacks: bindActionCreators(Actions.stopChangingFeedbacks, dispatch)
         };
     }
-)(PeoplesFeedback);
+)(PeopleFeedback);
  

@@ -18,7 +18,7 @@ import {
 * Components
 */
 
-import PeoplesFeedback from '../../SmallParts/PeoplesFeedback/peoplesFeedback';
+import PeopleFeedback from '../../SmallParts/PeopleFeedback/peopleFeedback';
 
 /**
 * Styles
@@ -70,7 +70,7 @@ export const Feedback = (props) => {
             <div className="feedback-border1">
                 <div className="feedback-border2">
                     <h1>What Clients Say About Us</h1>
-                        <PeoplesFeedback/>
+                        <PeopleFeedback/>
                 </div>
             </div>
         </div>
