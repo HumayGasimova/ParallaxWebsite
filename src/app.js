@@ -47,7 +47,7 @@ export class App extends Component {
                path="/service1"
                component={ Service1 }
             />
-             <Route 
+            <Route 
                exact 
                path="/service2"
                component={ Service2 }
